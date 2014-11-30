@@ -10,3 +10,4 @@ while true; do
   phantomjs rasterize.js $url "reve-$(echo $i).png" 384px
   i=$((i+1))
 done
+scp ./reve-* pi@raspberrypi.local:~/boiteareves/reves/
