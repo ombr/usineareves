@@ -1,8 +1,8 @@
 # RevesController
 class RevesController < ApplicationController
   def show
-    params[:id] = Reve.accepted.pluck(:id).sample unless params[:id]
-    @reve = Reve.find(params[:id])
+    params[:id] = Reve.accepted.pluck(:position).sample unless params[:id]
+    @reve = Reve.find_by_position(params[:id])
   end
 
   def create
