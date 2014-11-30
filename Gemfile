@@ -27,6 +27,7 @@ gem 'rails_12factor', group: [:development, :production]
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'slim-rails'
+gem 'haml-rails'
 
 gem 'simple_form', '~> 3.1.0.rc1',
     github: 'plataformatec/simple_form',

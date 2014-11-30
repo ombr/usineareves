@@ -3,10 +3,10 @@ development:
   host: localhost
   username: ombr
   password: root
-  database: cuicui
+  database: reves
 
 test:
   adapter: postgresql
   username: ombr
   password: root
-  database: cuicui_test
+  database: reves_test
