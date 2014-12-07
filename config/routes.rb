@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :reves, only: [:show, :create]
   root 'reves#show'
+  get 'a-propos' => 'pages#show', id: 'about', as: 'about'
 end

@@ -1,0 +1,33 @@
+.container-fluid.about
+  .row
+    .col-md-10.col-md-offset-1
+      = link_to root_path, class: 'btn btn-default' do
+        | Retour
+  .row
+    .col-md-4.col-md-offset-1
+      = image_tag 'boite.jpg', class: 'img-responsive'
+    .col-md-5.col-md-offset-1
+      h1 A Propos
+      p
+        |Développé en un weekend, le principe est simple: permettre aux utilisateurs de s'évader quelques instants.
+        |Une petite pièce insérée dans la boite à rêves au look retro, et quelques pixels de rêve s'impriment.
+        |De quoi sourire et repartir avec un instant de bonheur en poche.
+
+      p Entre mondes réel et virtuel, cette bonne humeur se développe aussi sur la toile, où il vous est possible d'ajouter une citation de votre choix, afin qu'elle apparaisse au plus vite dans la boite à rêve.
+      p Une façon originale de partager des sourires !
+
+      -# Et pour que ces petits bonheurs se répandent encore plus joyeusement, les bénéfices sont reversés à une association solidaire.
+      p Partez à la recherche de la boite à rêves, elle se cache dans Paris ou contactez-nous :
+      = link_to 'contact@la-boite-a-reves.fr', 'mailto:contact@la-boite-a-reves.fr'
+
+      -# les couloirs du métro parisien… ( pluriel pour les boites a reves? )
+      .row.team
+        .col-xs-4
+          = image_tag 'luc.jpg', class: 'img-responsive'
+          p Luc
+        .col-xs-4
+          = image_tag 'martin.jpg', class: 'img-responsive'
+          p Martin
+        .col-xs-4
+          = image_tag 'guillaume.jpg', class: 'img-responsive'
+          p Guillaume
