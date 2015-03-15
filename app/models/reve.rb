@@ -1,5 +1,6 @@
 # Reve
 class Reve < ActiveRecord::Base
+  belongs_to :box
   def self.accepted
     where(accepted: true)
   end

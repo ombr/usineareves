@@ -1,0 +1,8 @@
+.container-fluid
+  .row
+    .col-md-4.col-md-offset-4
+      h2= t('.sign_up', :default => "Sign up")
+      = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+          = f.input :email, label: false
+          = f.input :password, label: false
+          = f.submit t('.sign_up', :default => "Sign up"), class: 'btn btn-primary'

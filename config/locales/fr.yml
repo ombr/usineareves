@@ -1,0 +1,21 @@
+fr:
+  brand: La boite à rêves
+  layouts:
+    navbar:
+      my_boxes: Mes boites
+      sign_out: Déconnexion
+    application:
+      about: A propos
+  helpers:
+    submit:
+      box:
+        create: Créer ma boite
+  simple_form:
+    placeholders:
+      defaults:
+        name: Nom
+        email: Email
+        password: Mot de passe
+      box:
+        name: Nom de ma boite
+

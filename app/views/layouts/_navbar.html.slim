@@ -1,0 +1,15 @@
+= navbar fluid: true do
+  = vertical do
+    = link_to t('brand'), root_path
+  = horizontal do
+    - if user_signed_in?
+      = nav do
+        = link_to t('.my_boxes'), boxes_path
+      = nav class: 'navbar-right' do
+        = link_to t('.sign_out'), destroy_user_session_path
+    - else
+      = nav class: 'navbar-right' do
+        = link_to t('devise.sessions.new.sign_in'), new_user_session_path
+        = link_to t('devise.registrations.new.sign_up'), new_user_registration_path
+    = nav class: 'navbar-right' do
+      = link_to t('.about'), about_path

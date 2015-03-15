@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :users
   ActiveAdmin.routes(self)
-  resources :reves, only: [:show, :create]
-  root 'reves#show'
+  resources :boxes, ony: [:index, :new, :create] do
+    resources :reves, only: [:show, :create]
+  end
+  root 'pages#show', id: 'home'
   get 'a-propos' => 'pages#show', id: 'about', as: 'about'
 end

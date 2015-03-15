@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.0'
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -32,6 +33,12 @@ gem 'haml-rails'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'devise-i18n'
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
+gem 'devise-i18n-views'
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'bh'
+gem 'font-awesome-rails'
 
 gem 'simple_form', '~> 3.1.0.rc1',
     github: 'plataformatec/simple_form',

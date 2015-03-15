@@ -6,9 +6,10 @@ class RevesController < ApplicationController
   end
 
   def create
-    @reve = Reve.new reve_params
-    @reve.save!
-    redirect_to root_path
+    @box = Box.find_by(uid: params[:box_id])
+    @reve = @box.reves.create! reve_params
+    flash[:success] = t('reves.created')
+    redirect_to box_path(@box)
   end
 
   def reve_params
