@@ -1,10 +1,15 @@
 .container-fluid
   .row
     .col-xs-12
+      table.table
+        thead
+          tr
+            td Boite
+        tbody
+          - @boxes.each do |box|
+            tr
+              td
+                = link_to edit_box_path(box)
+                  = box.name
       = link_to new_box_path, class: 'btn btn-default' do
         | New Box
-      ul
-        - @boxes.each do |box|
-          li
-            = link_to box_path(box) do
-              = box.name

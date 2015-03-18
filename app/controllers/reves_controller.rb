@@ -1,8 +1,16 @@
 # RevesController
 class RevesController < ApplicationController
+  before_filter :authenticate_user!, only: [:update]
+
   def show
     params[:id] = Reve.accepted.pluck(:position).sample unless params[:id]
     @reve = Reve.find_by_position(params[:id])
+  end
+
+  def update
+    @reve = current_user.reves.find(params[:id])
+    @reve.update!(params.require(:reve).permit(:accepted))
+    @reve.reload
   end
 
   def create

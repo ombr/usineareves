@@ -38,6 +38,7 @@ gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
 gem 'devise-i18n-views'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'bh'
+gem 'flutie'
 gem 'font-awesome-rails'
 
 gem 'simple_form', '~> 3.1.0.rc1',

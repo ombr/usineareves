@@ -1,0 +1,9 @@
+.container-fluid
+  .row
+    .col-xs-12
+      .well
+        = link_to box_url(@box), box_path(@box)
+  .row
+    .col-xs-12
+      - @box.reves.each do |reve|
+        = render reve
